@@ -1,10 +1,11 @@
 package checker
 
 import (
+	"time"
+
 	"github.com/wcy-dt/ponghub/internal/types/structures/checker"
 	"github.com/wcy-dt/ponghub/internal/types/structures/configure"
 	"github.com/wcy-dt/ponghub/internal/types/types/chk_result"
-	"time"
 )
 
 // CheckServices checks all services defined in the configuration

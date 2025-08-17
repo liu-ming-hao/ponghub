@@ -1,10 +1,11 @@
 package logger
 
 import (
+	"log"
+
 	"github.com/wcy-dt/ponghub/internal/common"
 	"github.com/wcy-dt/ponghub/internal/types/structures/checker"
 	"github.com/wcy-dt/ponghub/internal/types/structures/logger"
-	"log"
 )
 
 // GetLogs writes check results to JSON file

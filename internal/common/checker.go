@@ -1,9 +1,10 @@
 package common
 
 import (
+	"time"
+
 	"github.com/wcy-dt/ponghub/internal/types/structures/checker"
 	"github.com/wcy-dt/ponghub/internal/types/types/chk_result"
-	"time"
 )
 
 // ProcessCheckResult processes the check results for a service

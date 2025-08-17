@@ -2,8 +2,9 @@ package common
 
 import (
 	"encoding/json"
-	"github.com/wcy-dt/ponghub/internal/types/structures/logger"
 	"os"
+
+	"github.com/wcy-dt/ponghub/internal/types/structures/logger"
 )
 
 // ReadLogs loads log data from file or returns empty data

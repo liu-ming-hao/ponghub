@@ -1,8 +1,9 @@
 package reporter
 
 import (
-	"github.com/wcy-dt/ponghub/internal/types/structures/logger"
 	"log"
+
+	"github.com/wcy-dt/ponghub/internal/types/structures/logger"
 )
 
 // ParseLogResult converts logger.Logger data into a reporter.Reporter format.

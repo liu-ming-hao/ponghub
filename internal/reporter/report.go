@@ -2,14 +2,15 @@ package reporter
 
 import (
 	"fmt"
+	"html/template"
+	"log"
+	"os"
+
 	"github.com/wcy-dt/ponghub/internal/common"
 	"github.com/wcy-dt/ponghub/internal/types/structures/checker"
 	"github.com/wcy-dt/ponghub/internal/types/structures/reporter"
 	"github.com/wcy-dt/ponghub/internal/types/types/chk_result"
 	"github.com/wcy-dt/ponghub/internal/types/types/default_config"
-	"html/template"
-	"log"
-	"os"
 )
 
 // GetReport generates a report based on the check results and log data

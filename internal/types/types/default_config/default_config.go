@@ -36,28 +36,28 @@ func GetDefaultCertNotifyDays() int {
 
 // SetDefaultTimeout sets the default timeout for a given configuration pointer
 func SetDefaultTimeout(cfg *int) {
-	if cfg == nil || *cfg <= 0 {
+	if *cfg <= 0 {
 		*cfg = GetDefaultTimeout()
 	}
 }
 
 // SetDefaultMaxRetryTimes sets the default maxRetryTimes count for a given configuration pointer
 func SetDefaultMaxRetryTimes(cfg *int) {
-	if cfg == nil || *cfg <= 0 {
+	if *cfg <= 0 {
 		*cfg = GetDefaultMaxRetryTimes()
 	}
 }
 
 // SetDefaultMaxLogDays sets the default maximum number of days to keep logs for a given configuration pointer
 func SetDefaultMaxLogDays(cfg *int) {
-	if cfg == nil || *cfg <= 0 {
+	if *cfg <= 0 {
 		*cfg = GetDefaultMaxLogDays()
 	}
 }
 
 // SetDefaultCertNotifyDays sets the default number of days to notify before certificate expiration for a given configuration pointer
 func SetDefaultCertNotifyDays(cfg *int) {
-	if cfg == nil || *cfg <= 0 {
+	if *cfg <= 0 {
 		*cfg = GetDefaultCertNotifyDays()
 	}
 }

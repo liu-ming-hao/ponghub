@@ -1,17 +1,18 @@
 package main
 
 import (
+	"io"
+	"log"
+	"os"
+	"path/filepath"
+	"testing"
+
 	"github.com/wcy-dt/ponghub/internal/checker"
 	"github.com/wcy-dt/ponghub/internal/configure"
 	"github.com/wcy-dt/ponghub/internal/logger"
 	"github.com/wcy-dt/ponghub/internal/notifier"
 	"github.com/wcy-dt/ponghub/internal/reporter"
 	"github.com/wcy-dt/ponghub/internal/types/types/default_config"
-	"io"
-	"log"
-	"os"
-	"path/filepath"
-	"testing"
 )
 
 // TestMain_append tests the main functionality when appending to an existing log file.

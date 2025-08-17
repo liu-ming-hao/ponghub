@@ -40,16 +40,6 @@ func IsALL(resultStr string) bool {
 	return ParseCheckResult(resultStr) == ALL
 }
 
-// IsPART checks if the CheckResult is PART
-func IsPART(resultStr string) bool {
-	return ParseCheckResult(resultStr) == PART
-}
-
-// IsNONE checks if the CheckResult is NONE
-func IsNONE(resultStr string) bool {
-	return ParseCheckResult(resultStr) == NONE
-}
-
 // ParseCheckResult parses a string into a CheckResult
 func ParseCheckResult(s string) CheckResult {
 	switch s {
@@ -62,13 +52,4 @@ func ParseCheckResult(s string) CheckResult {
 	default:
 		return UNKNOWN
 	}
-}
-
-// ParseCheckResults parses a slice of strings into a slice of CheckResult
-func ParseCheckResults(results []string) []CheckResult {
-	var parsedResults []CheckResult
-	for _, result := range results {
-		parsedResults = append(parsedResults, ParseCheckResult(result))
-	}
-	return parsedResults
 }

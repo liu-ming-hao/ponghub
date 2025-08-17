@@ -1,13 +1,14 @@
 package main
 
 import (
+	"log"
+
 	"github.com/wcy-dt/ponghub/internal/checker"
 	"github.com/wcy-dt/ponghub/internal/configure"
 	"github.com/wcy-dt/ponghub/internal/logger"
 	"github.com/wcy-dt/ponghub/internal/notifier"
 	"github.com/wcy-dt/ponghub/internal/reporter"
 	"github.com/wcy-dt/ponghub/internal/types/types/default_config"
-	"log"
 )
 
 func main() {

@@ -1,11 +1,12 @@
 package notifier
 
 import (
+	"log"
+	"os"
+
 	"github.com/wcy-dt/ponghub/internal/types/structures/checker"
 	"github.com/wcy-dt/ponghub/internal/types/types/chk_result"
 	"github.com/wcy-dt/ponghub/internal/types/types/default_config"
-	"log"
-	"os"
 )
 
 // WriteNotifications sends notifications based on the service check results

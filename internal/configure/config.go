@@ -1,10 +1,11 @@
 package configure
 
 import (
-	"github.com/wcy-dt/ponghub/internal/types/structures/configure"
-	"github.com/wcy-dt/ponghub/internal/types/types/default_config"
 	"log"
 	"os"
+
+	"github.com/wcy-dt/ponghub/internal/types/structures/configure"
+	"github.com/wcy-dt/ponghub/internal/types/types/default_config"
 
 	"gopkg.in/yaml.v3"
 )

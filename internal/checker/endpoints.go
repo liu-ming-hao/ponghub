@@ -3,14 +3,15 @@ package checker
 import (
 	"errors"
 	"fmt"
-	"github.com/wcy-dt/ponghub/internal/types/structures/checker"
-	"github.com/wcy-dt/ponghub/internal/types/structures/configure"
 	"io"
 	"log"
 	"net/http"
 	"regexp"
 	"strings"
 	"time"
+
+	"github.com/wcy-dt/ponghub/internal/types/structures/checker"
+	"github.com/wcy-dt/ponghub/internal/types/structures/configure"
 )
 
 // checkEndpoint checks a single port based on the provided configuration

@@ -1,8 +1,9 @@
 package checker
 
 import (
-	"github.com/wcy-dt/ponghub/internal/types/types/chk_result"
 	"time"
+
+	"github.com/wcy-dt/ponghub/internal/types/types/chk_result"
 )
 
 // Result defines the structure for the result of checking a service
