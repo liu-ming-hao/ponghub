@@ -24,17 +24,17 @@ func GetReport(checkResult []checker.Checker, logPath string) (reporter.Reporter
 	reportResult := reporter.ParseLogResult(logResult)
 
 	// calculate availability
-	for serviceName, serviceLog := range logResult {
-		if len(serviceLog.ServiceHistory) == 0 {
+	for serviceName, serviceReport := range reportResult {
+		if len(serviceReport.ServiceHistory) == 0 {
 			continue
 		}
 		statusAllEntryNum := 0
-		for _, entry := range serviceLog.ServiceHistory {
+		for _, entry := range serviceReport.ServiceHistory {
 			if chk_result.IsALL(entry.Status) {
 				statusAllEntryNum++
 			}
 		}
-		availability := float64(statusAllEntryNum) / float64(len(serviceLog.ServiceHistory))
+		availability := float64(statusAllEntryNum) / float64(len(serviceReport.ServiceHistory))
 		tmp := reportResult[serviceName]
 		tmp.Availability = availability
 		reportResult[serviceName] = tmp
