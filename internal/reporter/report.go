@@ -79,6 +79,7 @@ func WriteReport(reportResult reporter.Reporter, reportPath string) error {
 	if err := tmpl.Execute(reportFile, map[string]any{
 		"ReportResult": reportResult,
 		"UpdateTime":   getLatestTime(reportResult),
+		"DisplayNum":   default_config.GetDisplayNum(),
 	}); err != nil {
 		return fmt.Errorf("template execution failed: %w", err)
 	}

@@ -63,6 +63,16 @@ func SetDefaultCertNotifyDays(cfg *int) {
 }
 
 const (
+	// displayNum is the default number of logs per endpoint to display in the HTML report
+	displayNum = 72
+)
+
+// GetDisplayNum returns the default number of logs per endpoint to display in the HTML report
+func GetDisplayNum() int {
+	return displayNum
+}
+
+const (
 	// configPath is the default path to the configuration file
 	configPath = "config.yaml"
 

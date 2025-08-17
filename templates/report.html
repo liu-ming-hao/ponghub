@@ -35,8 +35,8 @@
                 </div>
                 <div class="status-bar status-bar-header">
                     {{ $len := len $ServiceReport.ServiceHistory }}
-                    {{ if lt $len 72 }}
-                    {{ $missing := sub 72 $len }}
+                    {{ if lt $len $.DisplayNum }}
+                    {{ $missing := sub $.DisplayNum $len }}
                     {{ range $i := until $missing }}
                     <div class="status-rect status-unknown" title="No Result" data-time="No Data">
                         <div class="status-rect-content" style="height: 100%;"></div>
@@ -44,7 +44,7 @@
                     {{ end }}
                     {{ end }}
                     {{ range $i, $h := $ServiceReport.ServiceHistory }}
-                    {{ if ge $i (sub $len 72) }}
+                    {{ if ge $i (sub $len $.DisplayNum) }}
                     <div class="status-rect status-{{ $h.Status }}" title="{{ $h.Time }}: {{ $h.Status }}" data-time="{{ $h.Time }}">
                         {{ if or (not $h.ResponseTime) (ge $h.ResponseTime 1000) }}
                         <div class="status-rect-content" style="height: 100%;"></div>
@@ -86,8 +86,8 @@
                 </div>
                 <div class="status-bar port-status-bar">
                     {{ $len := len $arr }}
-                    {{ if lt $len 72 }}
-                        {{ $missing := sub 72 $len }}
+                    {{ if lt $len $.DisplayNum }}
+                        {{ $missing := sub $.DisplayNum $len }}
                         {{ range $i := until $missing }}
                             <div class="status-rect status-unknown" title="No Result" data-time="No Data">
                                 <div class="status-rect-content" style="height: 100%;"></div>
@@ -95,7 +95,7 @@
                         {{ end }}
                     {{ end }}
                     {{ range $i, $h := $arr }}
-                        {{ if ge $i (sub $len 72) }}
+                        {{ if ge $i (sub $len $.DisplayNum) }}
                             <div class="status-rect status-{{ $h.Status }}" data-time="{{ $h.Time }}">
                                 {{ if or (not $h.ResponseTime) (ge $h.ResponseTime 500) }}
                                     <div class="status-rect-content" style="height: 100%;"></div>
